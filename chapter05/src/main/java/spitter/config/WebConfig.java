@@ -26,6 +26,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }
 
+    /**
+     * 配置静态资源的处理
+     * @param configurer
+     */
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();

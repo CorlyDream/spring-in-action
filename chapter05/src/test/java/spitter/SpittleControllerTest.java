@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standal
  */
 public class SpittleControllerTest {
 
-    @Test
+//    @Test
     public void houldShowRecentSpittles() throws Exception {
         List<Spittle> expectedSpittles = createSpittleList(20);
         SpittleRepository mockRepository = mock(SpittleRepository.class);
@@ -44,7 +44,7 @@ public class SpittleControllerTest {
                         hasItems(expectedSpittles.toArray())));
     }
 
-    @Test
+//    @Test
     public void shouldShowPagedSpittles() throws Exception {
         List<Spittle> expectedSpittles = createSpittleList(50);
         SpittleRepository mockRepository = mock(SpittleRepository.class);
