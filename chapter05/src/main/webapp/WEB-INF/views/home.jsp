@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false" %>
 <!DOCTYPE html>
@@ -9,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>home.jsp</h1>
+	<h1>home.jspaaa</h1>
 	<a href="<c:url value="/spittes" />" ></a>
 	<a href="<c:url value="/spitter/register" />" ></a>
 </body>

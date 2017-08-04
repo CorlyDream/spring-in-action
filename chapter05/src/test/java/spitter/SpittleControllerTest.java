@@ -13,10 +13,14 @@ import java.util.Date;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.hasItems;
+import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
@@ -25,7 +29,7 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standal
  */
 public class SpittleControllerTest {
 
-//    @Test
+    @Test
     public void houldShowRecentSpittles() throws Exception {
         List<Spittle> expectedSpittles = createSpittleList(20);
         SpittleRepository mockRepository = mock(SpittleRepository.class);
@@ -44,7 +48,7 @@ public class SpittleControllerTest {
                         hasItems(expectedSpittles.toArray())));
     }
 
-//    @Test
+    @Test
     public void shouldShowPagedSpittles() throws Exception {
         List<Spittle> expectedSpittles = createSpittleList(50);
         SpittleRepository mockRepository = mock(SpittleRepository.class);
@@ -63,7 +67,7 @@ public class SpittleControllerTest {
                         hasItems(expectedSpittles.toArray())));
     }
 
-    /*@Test
+    @Test
     public void testSpittle() throws Exception {
         Spittle expectedSpittle = new Spittle("Hello", new Date());
         SpittleRepository mockRepository = mock(SpittleRepository.class);
@@ -92,7 +96,7 @@ public class SpittleControllerTest {
                 .andExpect(redirectedUrl("/spittles"));
 
         verify(mockRepository, atLeastOnce()).save(new Spittle(null, "Hello World", new Date(), -81.5811668, 28.4159649));
-    }*/
+    }
 
     private List<Spittle> createSpittleList(int count) {
         List<Spittle> spittles = new ArrayList<Spittle>();
