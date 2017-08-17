@@ -193,7 +193,6 @@
                 <version>2.6</version>
                 <configuration>
                     <warName>${project.artifactId}-${project.version}</warName>
-                    <scanIntervalSeconds>0</scanIntervalSeconds>
                     <webResources>
                         <resource>
                             <directory>src/main/resources</directory>
